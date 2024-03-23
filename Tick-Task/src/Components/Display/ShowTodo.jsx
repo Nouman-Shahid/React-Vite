@@ -7,7 +7,7 @@ let ShowTodo = ({ list }) => {
 
             {
                 list.map((item) => (
-                    <Items itemtext={item.text} itemdate={item.date} />
+                    <Items key={item.text} itemtext={item.text} itemdate={item.date} />
                 ))
             }
 
