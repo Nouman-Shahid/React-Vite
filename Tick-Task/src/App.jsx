@@ -13,14 +13,18 @@ function App() {
       text: 'Do twenty push ups',
       date: '22/03/2024'
     },
+    {
+      text: 'Do Shopping',
+      date: '23/03/2024'
+    },
   ]
 
   return (
-    <center>
+    <main>
       <h1>Tick Task</h1>
       <AddTodo />
       <ShowTodo list={lists} />
-    </center>
+    </main>
   )
 }
 

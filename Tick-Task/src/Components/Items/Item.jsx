@@ -11,7 +11,7 @@ const Items = ({ itemtext, itemdate }) => {
                 <div className="col-3">
                     <p key={itemdate}>{itemdate}</p>
                 </div>
-                <div className="col-3">
+                <div className={`col-3 ${styles.btn}`}>
                     <button type="button" className="btn btn-danger">Delete</button>
                 </div>
             </div>
