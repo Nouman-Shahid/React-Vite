@@ -1,0 +1,16 @@
+.main {
+    background-color: rgb(212, 212, 212);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading {
+    text-align: center;
+    width: 35vw;
+    color: rgb(2, 2, 150);
+}
