@@ -17,7 +17,7 @@ function App() {
 
   return (
     <center>
-      <h1>Todo App</h1>
+      <h1>Tick Task</h1>
       <AddTodo />
       <ShowTodo list={lists} />
     </center>
