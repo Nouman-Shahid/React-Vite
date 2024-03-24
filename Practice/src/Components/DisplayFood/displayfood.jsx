@@ -14,7 +14,9 @@ const displayfood = () => {
                 foodlists != ""
                     ?
                     foodlists.map((items) => (
-                        <Fooditems key={items} fooditem={items} />
+                        <Fooditems key={items} fooditem={items} Btn={() => {
+                            console.log(`${items} is being bought`)
+                        }} />
                     ))
                     :
                     <ErrorMessage />
