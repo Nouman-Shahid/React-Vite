@@ -7,25 +7,16 @@ import ErrorMsg from '../ErrorMsg/errormsg'
 
 const displayTodo = () => {
 
-    let [lists, setlist] = useState("")
+    let [lists, setlist] = useState([])
 
-    let addTodoList = (event) => {
+    let addTodoList = (todo, date) => {
 
-        if (event.target.innerHTML == 'Add') {
-            console.log(event.target.value)
-        }
+        let newlists = [...lists, {
+            data: todo,
+            time: date,
+        }]
+        setlist(newlists)
     }
-
-    lists = [
-        {
-            data: "Go to Gym",
-            time: "22/03/2024",
-        },
-        {
-            data: "Do Shopping",
-            time: "24/03/2023",
-        },
-    ]
 
     return (
         <>
@@ -34,7 +25,7 @@ const displayTodo = () => {
                 <AddTodo handleOnClick={addTodoList} />
 
                 {
-                    lists != ""
+                    lists.length !== 0
                         ?
                         lists.map((item) => (
                             <ListTodo key={item.data} time={item.time} data={item.data} />
