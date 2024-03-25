@@ -1,5 +1,8 @@
 import React from 'react'
-import ListTodo from './Todolists.listTodo.jsx'
+import ListTodo from '../Todolists/listTodo'
+import Heading from '../Title/title'
+import AddTodo from '../Add/addTodo'
+import styles from './display.module.css'
 
 const displayTodo = () => {
 
@@ -15,14 +18,16 @@ const displayTodo = () => {
     ]
     return (
         <>
+            <div className={`${styles.main}`}>
+                <Heading />
+                <AddTodo />
 
-            {
-                list.map((item) => (
-                    <ListTodo data={item.data} time={item.time} />
-                ))
-            }
-
-
+                {
+                    list.map((item) => (
+                        <ListTodo time={item.time} data={item.data} />
+                    ))
+                }
+            </div>
         </>
     )
 }

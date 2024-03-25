@@ -1,0 +1,27 @@
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    padding: 2vh;
+}
+
+.list input {
+    padding: 1.5vh;
+    width: 13vw;
+}
+
+.list button {
+    padding: 1.5vh;
+    background-color: rgb(197, 44, 44);
+    color: white;
+    border-radius: 3vh;
+    width: 5vw;
+    font-size: small;
+    cursor: pointer;
+    border: none;
+}
+
+.list button:hover {
+    scale: 1.03;
+}
