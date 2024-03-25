@@ -1,13 +1,15 @@
 import React from 'react'
 import styles from './addTodo.module.css'
-const addTodo = () => {
+const addTodo = ({ handleOnClick }) => {
     return (
         <>
-            <div className={styles.list}>
-                <input type='text' placeholder='Enter Todo' />
-                <input type='date' />
-                <button>Add</button>
-            </div>
+            <form>
+                <div className={styles.list}>
+                    <input type='text' id='enterTodo' placeholder='Enter Todo' required />
+                    <input type='date' required />
+                    <button onClick={handleOnClick}>Add</button>
+                </div>
+            </form>
         </>
     )
 }
