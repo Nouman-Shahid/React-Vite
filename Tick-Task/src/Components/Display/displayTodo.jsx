@@ -17,10 +17,16 @@ const displayTodo = () => {
         }]
         setlist(newlists)
     }
+    let deleteTodoList = (todoItemName) => {
+
+        const newarr = lists.filter((item) => (item.data !== todoItemName))
+        setlist(newarr)
+    }
 
     return (
         <>
             <div className={`${styles.main}`}>
+
                 <Heading />
                 <AddTodo handleOnClick={addTodoList} />
 
@@ -28,7 +34,7 @@ const displayTodo = () => {
                     lists.length !== 0
                         ?
                         lists.map((item) => (
-                            <ListTodo key={item.data} time={item.time} data={item.data} />
+                            <ListTodo key={item.data} time={item.time} data={item.data} handleDelete={deleteTodoList} />
                         ))
 
                         :

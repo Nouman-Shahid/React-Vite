@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import styles from './addTodo.module.css'
+import { VscAdd } from "react-icons/vsc";
+
+
 const addTodo = ({ handleOnClick }) => {
     let [itemTodo, setItemTodo] = useState()
     let [itemDate, setItemDate] = useState()
@@ -24,7 +27,7 @@ const addTodo = ({ handleOnClick }) => {
             <div className={styles.list}>
                 <input type='text' placeholder='Enter Todo' value={itemTodo} onChange={handleNameChange} />
                 <input type='date' value={itemDate} onChange={handleDateChange} />
-                <button onClick={onClick}>Add</button>
+                <button onClick={onClick}> <VscAdd className={styles.img} /> </button>
             </div>
         </>
     )
