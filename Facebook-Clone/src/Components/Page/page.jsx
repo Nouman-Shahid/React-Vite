@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../navBar/navbar';
+import Leftbar from '../leftSideBar/leftbar';
 
 const Page = () => {
     const [firstName, setFirstName] = useState('');
@@ -23,6 +24,7 @@ const Page = () => {
         <>
 
             <Navbar />
+            <Leftbar />
 
 
         </>

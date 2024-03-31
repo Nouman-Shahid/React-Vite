@@ -1,0 +1,30 @@
+.sidenav {
+    width: 21vw;
+    height: 65vh;
+    padding: 2vh;
+
+}
+
+.sidenav .list {
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #d3d5d9;
+    padding: 1.8vh;
+    border-radius: 1.5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.sidenav .list:hover {
+    background-color: #3a3b3c;
+}
+
+.sidenav .list label {
+    margin: 0 2vh;
+}
+
+.sidenav .list img {
+    height: 4.5vh;
+}
