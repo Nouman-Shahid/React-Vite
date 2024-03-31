@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../navBar/navbar';
 
 const Page = () => {
     const [firstName, setFirstName] = useState('');
@@ -19,11 +20,12 @@ const Page = () => {
     };
 
     return (
-        <div>
-            <img src={firstImage} alt="" />
-            <h1>{firstName}</h1>
-            <button onClick={userAPI}>Click me</button>
-        </div>
+        <>
+
+            <Navbar />
+
+
+        </>
     );
 };
 
