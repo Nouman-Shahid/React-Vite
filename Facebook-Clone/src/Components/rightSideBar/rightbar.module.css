@@ -1,0 +1,72 @@
+.rightnav {
+    width: 21vw;
+    height: 89vh;
+    padding: 0vh 1vh;
+    overflow-x: hidden;
+    position: fixed;
+    top: 10.5vh;
+    right: 0;
+}
+
+
+.rightnav::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1.5vh;
+}
+
+.rightnav:hover::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(182, 181, 181, 0.5);
+    color: red;
+}
+
+.rightnav .list {
+    font-weight: 600;
+    color: #d3d5d9;
+    padding: 1.8vh;
+    border-radius: 1.5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    overflow-y: auto;
+}
+
+.rightnav .list:hover {
+    background-color: #3a3b3c;
+}
+
+.rightnav .list label {
+    margin: 0 2vh;
+}
+
+.rightnav .list img {
+    height: 4.5vh;
+}
+
+.arrowbtn {
+
+    padding: 0.4vh;
+    background-color: rgb(54, 54, 54);
+    border-radius: 50%;
+    margin-left: -0.4vh;
+}
+
+.rightnav hr {
+
+    width: 100%;
+    border: 1px solid #3E4042;
+    opacity: 0.7;
+}
+
+.rightnav h3 {
+    color: #A6A9AD;
+    font-size: 2.8vh;
+    padding: 0 2vh;
+}
+
+.rightnav p {
+    color: #A6A9AD;
+    font-size: 2vh;
+    padding: 1vh 2vh;
+}

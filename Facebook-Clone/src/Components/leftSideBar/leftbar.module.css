@@ -1,13 +1,26 @@
 .sidenav {
     width: 21vw;
-    height: 65vh;
-    padding: 2vh;
+    height: 89vh;
+    padding: 0vh 1vh;
+    overflow-x: hidden;
+    position: fixed;
+    top: 10.5vh;
+    left: 0;
+}
 
+
+.sidenav::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1.5vh;
+}
+
+.sidenav:hover::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(182, 181, 181, 0.5);
+    color: red;
 }
 
 .sidenav .list {
-    list-style: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     color: #d3d5d9;
     padding: 1.8vh;
@@ -16,6 +29,7 @@
     justify-content: start;
     align-items: center;
     cursor: pointer;
+    overflow-y: auto;
 }
 
 .sidenav .list:hover {
@@ -28,4 +42,31 @@
 
 .sidenav .list img {
     height: 4.5vh;
+}
+
+.arrowbtn {
+
+    padding: 0.4vh;
+    background-color: rgb(54, 54, 54);
+    border-radius: 50%;
+    margin-left: -0.4vh;
+}
+
+.sidenav hr {
+
+    width: 100%;
+    border: 1px solid #3E4042;
+    opacity: 0.7;
+}
+
+.sidenav h3 {
+    color: #A6A9AD;
+    font-size: 2.8vh;
+    padding: 0 2vh;
+}
+
+.sidenav p {
+    color: #A6A9AD;
+    font-size: 2vh;
+    padding: 1vh 2vh;
 }

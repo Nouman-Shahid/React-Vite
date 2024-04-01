@@ -1,16 +1,22 @@
 .nav {
     background-color: #242526;
     height: 9vh;
+    width: 99%;
     border: 1px solid #393a3b;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.5vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
 }
 
 .nav .left {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 22vw;
 }
 
@@ -22,9 +28,11 @@
 .left input {
     all: unset;
     background-color: #3a3b3c;
-    padding: 1.8vh 3vh;
+    padding: 1.6vh 3vh;
     border-radius: 5vh;
     color: rgb(228, 227, 227);
+    width: 70%;
+    margin: 0 1vh;
 }
 
 .left input::placeholder {
@@ -59,15 +67,15 @@
 
 .nav .right {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 15vw;
+    justify-content: right;
+    width: 20.5vw;
     padding: 0vh 2vh;
 }
 
 .right button {
 
     all: unset;
+    margin: 0 1vh;
     width: 6.3vh;
     height: 6.5vh;
     text-align: center;
