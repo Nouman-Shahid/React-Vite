@@ -72,6 +72,42 @@ const posts = () => {
                 <div className={styles.imagepost}>
 
                     <div className={styles.addpost}>
+                        <img src="public/person2.png" alt="Facebook Logo" />
+                        <h4>Umar Salman</h4>
+                    </div>
+
+                    <div className={styles.icons}>
+
+                        <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                        <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                    </div>
+                </div>
+
+                <img src="public/user2.jpeg" className={styles.img} alt="" />
+
+            </div>
+            <div className={styles.largepost}>
+                <div className={styles.imagepost}>
+
+                    <div className={styles.addpost}>
+                        <img src="public/person3.png" alt="Facebook Logo" />
+                        <h4>Agha Ali</h4>
+                    </div>
+
+                    <div className={styles.icons}>
+
+                        <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                        <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                    </div>
+                </div>
+
+                <img src="public/user1.jpeg" className={styles.img} alt="" />
+
+            </div>
+            <div className={styles.largepost}>
+                <div className={styles.imagepost}>
+
+                    <div className={styles.addpost}>
                         <img src="public/person1.png" alt="Facebook Logo" />
                         <h4>Muhammad Salman</h4>
                     </div>
