@@ -3,6 +3,21 @@ import styles from './rightbar.module.css'
 import { FaBirthdayCake } from "react-icons/fa";
 
 const rightbar = () => {
+
+    let friends = [
+        {
+            name: 'Saad Ahmed',
+            img: 'public/person1.png'
+        },
+        {
+            name: 'Asim Ali',
+            img: 'public/person2.png'
+        },
+        {
+            name: 'Haseeb Rajput',
+            img: 'public/person3.png'
+        },
+    ]
     return (
         <div className={styles.rightnav}>
 
@@ -12,9 +27,13 @@ const rightbar = () => {
             <hr />
 
             <h3>Contacts</h3>
-            <div className={styles.list}><img src="public/person1.png" style={{ borderRadius: '1vh' }} /> <label>Saad Ahmed</label></div>
-            <div className={styles.list}><img src="public/person2.png" style={{ borderRadius: '1vh' }} /> <label>Asim Ali</label></div>
-            <div className={styles.list}><img src="public/person3.png" style={{ borderRadius: '1vh' }} /> <label>Haseeb Rajput</label></div>
+
+            {
+                friends.map((item) => (
+                    <div className={styles.list}><img src={item.img} style={{ borderRadius: '1vh' }} /> <label>{item.name}</label></div>
+                ))
+            }
+
             <hr />
             <h3>Group conservations</h3>
             <div className={styles.list}><img src="public/soccer.png" style={{ borderRadius: '1vh' }} /> <label>10-D</label></div>
