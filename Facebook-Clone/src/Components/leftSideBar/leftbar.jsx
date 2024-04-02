@@ -25,17 +25,26 @@ const leftbar = () => {
     let handleOnClick = () => {
         setIsClicked(!isClicked)
     }
+
+    let features = [
+        { name: 'Friends', img: FaUserFriends, size: '1.5em', color: '#1a82f5' },
+        { name: 'Pages', img: FaFlag, size: '1.3em', color: '#ea562a', },
+        { name: 'Memories', img: FaClock, size: '1.2em', color: '#f9f9fb', },
+        { name: 'Saved', img: FaBookmark, size: '1.3em', color: '#be45c5' },
+        { name: 'Groups', img: IoPeopleCircleOutline, size: '1.3em', color: '#1a79df' },
+        { name: 'Marketplaces', img: AiTwotoneShop, size: '1.3em', color: '#1a82f5' },
+        { name: 'Feeds', img: FcFeedback, size: '1.3em', color: '#1a82f5' },
+    ]
     return (
         <div className={styles.sidenav}>
 
             <div className={styles.list}> <img src="public/user.png" /> <label>Numan Shahid</label></div>
-            <div className={styles.list}> <FaUserFriends size='1.5em' color='#1a82f5' />  <label>Friends</label></div>
-            <div className={styles.list}><FaFlag size='1.3em' color='#ea562a' /> <label >Pages</label></div>
-            <div className={styles.list}><FaClock size='1.2em' color='#f9f9fb' /> <label>Memories</label></div>
-            <div className={styles.list}><FaBookmark size='1.3em' color='#be45c5' /><label >Saved</label></div>
-            <div className={styles.list}><IoPeopleCircleOutline size='1.3em' color='#1a79df' /> <label>Groups</label></div>
-            <div className={styles.list}><AiTwotoneShop size='1.3em' color='#1a82f5' /> <label >Marketplaces</label></div>
-            <div className={styles.list}><FcFeedback size='1.3em' /> <label >Feeds</label></div>
+
+            {
+                features.map((item) => (
+                    <div className={styles.list}><item.img size={item.size} color={item.color} /> <label >{item.name}</label></div>
+                ))
+            }
 
 
             {
