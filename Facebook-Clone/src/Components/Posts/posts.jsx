@@ -73,7 +73,7 @@ const posts = () => {
 
                     <div className={styles.addpost}>
                         <img src="public/person2.png" alt="Facebook Logo" />
-                        <h4>Umar Salman</h4>
+                        <h4>Umar Ahmed</h4>
                     </div>
 
                     <div className={styles.icons}>
