@@ -17,6 +17,35 @@ const Navbar = () => {
         setActiveBtn(btnId);
     }
 
+    let icons = [
+        {
+            id: 'btn1',
+            size: '1.7em',
+            icon: GoHome,
+        },
+        {
+            id: 'btn2',
+            size: '1.7em',
+            icon: BsPeople,
+        },
+        {
+            id: 'btn3',
+            size: '1.7em',
+            icon: AiTwotoneShop,
+        },
+        {
+            id: 'btn4',
+            size: '1.8em',
+            icon: IoPeopleCircleOutline,
+        },
+        {
+            id: 'btn5',
+            size: '1.8em',
+            icon: RiGamepadLine,
+        },
+
+    ]
+
     return (
         <nav className={styles.nav}>
             <div className={styles.left}>
@@ -25,21 +54,15 @@ const Navbar = () => {
             </div>
 
             <div className={styles.center}>
-                <button style={{ color: activeBtn === 'btn1' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn1')}>
-                    <GoHome size="1.7em" />
-                </button>
-                <button style={{ color: activeBtn === 'btn2' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn2')}>
-                    <BsPeople size="1.7em" />
-                </button>
-                <button style={{ color: activeBtn === 'btn3' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn3')}>
-                    <AiTwotoneShop size="1.7em" />
-                </button>
-                <button style={{ color: activeBtn === 'btn4' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn4')}>
-                    <IoPeopleCircleOutline size="1.8em" />
-                </button>
-                <button style={{ color: activeBtn === 'btn5' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn5')}>
-                    <RiGamepadLine size="1.7em" />
-                </button>
+
+                {
+                    icons.map((item) => (
+                        <button style={{ color: activeBtn === item.id ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick(item.id)}>
+                            <item.icon size={item.size} />
+                        </button>
+                    ))
+                }
+
             </div>
 
             <div className={styles.right}>
