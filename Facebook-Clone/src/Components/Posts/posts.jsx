@@ -28,6 +28,24 @@ const posts = () => {
         },
     ]
 
+    let posts = [
+        {
+            userImage: 'public/person1.png',
+            userName: 'Muhammad Salman',
+            userPost: 'public/user3.jpg'
+        },
+        {
+            userImage: 'public/person2.png',
+            userName: 'Umer Ahmed',
+            userPost: 'public/user2.jpeg'
+        },
+        {
+            userImage: 'public/person3.png',
+            userName: 'Agha Ali',
+            userPost: 'public/user1.jpeg'
+        },
+    ]
+
     return (
         <main className={styles.main}>
 
@@ -83,59 +101,30 @@ const posts = () => {
 
 
             <div className={styles.largepost}>
-                <div className={styles.imagepost}>
+                {
+                    posts.map((item) => (
+                        <>
+                            <div className={styles.imagepost}>
+                                <div className={styles.addpost}>
+                                    <img src={item.userImage} />
+                                    <h4>{item.userName}</h4>
+                                </div>
 
-                    <div className={styles.addpost}>
-                        <img src="public/person2.png" alt="Facebook Logo" />
-                        <h4>Umar Ahmed</h4>
-                    </div>
+                                <div className={styles.icons}>
 
-                    <div className={styles.icons}>
+                                    <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                                    <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                                </div>
+                            </div>
 
-                        <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                    </div>
-                </div>
-
-                <img src="public/user2.jpeg" className={styles.img} alt="" />
-
-            </div>
-            <div className={styles.largepost}>
-                <div className={styles.imagepost}>
-
-                    <div className={styles.addpost}>
-                        <img src="public/person3.png" alt="Facebook Logo" />
-                        <h4>Agha Ali</h4>
-                    </div>
-
-                    <div className={styles.icons}>
-
-                        <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                    </div>
-                </div>
-
-                <img src="public/user1.jpeg" className={styles.img} alt="" />
+                            <img src={item.userPost} className={styles.img} />
+                        </>
+                    ))
+                }
 
             </div>
-            <div className={styles.largepost}>
-                <div className={styles.imagepost}>
 
-                    <div className={styles.addpost}>
-                        <img src="public/person1.png" alt="Facebook Logo" />
-                        <h4>Muhammad Salman</h4>
-                    </div>
 
-                    <div className={styles.icons}>
-
-                        <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                    </div>
-                </div>
-
-                <img src="public/user3.jpg" className={styles.img} alt="" />
-
-            </div>
 
         </main>
     )
