@@ -10,12 +10,22 @@ import { RxCross1 } from "react-icons/rx";
 
 const posts = () => {
 
-    let card = [
+    let stories = [
         {
-            userImage: 'public/user1.jpeg',
-            userStory: 'public/person1.png',
+            userImage: 'public/person1.png',
+            userStory: 'public/story1.jpeg',
             userName: 'Muhammad Salman',
-        }
+        },
+        {
+            userImage: 'public/person2.png',
+            userStory: 'public/story2.jpeg',
+            userName: 'Saeed Ali',
+        },
+        {
+            userImage: 'public/person3.png',
+            userStory: 'public/story3.jpg',
+            userName: 'Rana Bilal Ahmed',
+        },
     ]
 
     return (
@@ -29,16 +39,16 @@ const posts = () => {
                     <h5>Create Story</h5>
                 </div>
 
-                <div className={styles.card}>
-                    <img src="public/user2.jpeg" alt="" />
-                    <img src="public/person2.jpeg" className={styles.user} />
-                    <h5>Saeed Ali</h5>
-                </div>
-                <div className={styles.card}>
-                    <img src="public/user3.jpg" alt="" />
-                    <img src="public/person3.jpeg" className={styles.user} />
-                    <h5>Rana Bilal Ahmed </h5>
-                </div>
+                {
+                    stories.map((item) => (
+                        <div className={styles.card}>
+                            <img src={item.userStory} />
+                            <img src={item.userImage} className={styles.user} />
+                            <h5>{item.userName}</h5>
+                        </div>
+                    ))
+                }
+
 
 
             </div>
