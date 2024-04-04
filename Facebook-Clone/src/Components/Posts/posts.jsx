@@ -9,6 +9,15 @@ import { RxCross1 } from "react-icons/rx";
 
 
 const posts = () => {
+
+    let card = [
+        {
+            userImage: 'public/user1.jpeg',
+            userStory: 'public/person1.png',
+            userName: 'Muhammad Salman',
+        }
+    ]
+
     return (
         <main className={styles.main}>
 
@@ -20,11 +29,6 @@ const posts = () => {
                     <h5>Create Story</h5>
                 </div>
 
-                <div className={styles.card}>
-                    <img src="public/user1.jpeg" alt="" />
-                    <img src="public/person1.png" className={styles.user} />
-                    <h5>Muhammad Salman </h5>
-                </div>
                 <div className={styles.card}>
                     <img src="public/user2.jpeg" alt="" />
                     <img src="public/person2.jpeg" className={styles.user} />
