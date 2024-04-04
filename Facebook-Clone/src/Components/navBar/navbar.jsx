@@ -38,7 +38,7 @@ const Navbar = () => {
                     <IoPeopleCircleOutline size="1.8em" />
                 </button>
                 <button style={{ color: activeBtn === 'btn5' ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick('btn5')}>
-                    <RiGamepadLine size="1.8em" />
+                    <RiGamepadLine size="1.7em" />
                 </button>
             </div>
 
