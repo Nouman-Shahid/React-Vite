@@ -18,7 +18,7 @@ import { GiSwipeCard } from "react-icons/gi";
 
 
 
-const leftbar = ({ fullname, img }) => {
+const leftbar = ({ firstname, lastname, img }) => {
 
     const [isClicked, setIsClicked] = useState(false)
 
@@ -38,7 +38,9 @@ const leftbar = ({ fullname, img }) => {
     return (
         <div className={styles.sidenav}>
 
-            <div className={styles.list}> <img src={img} /> <label>{fullname}</label></div>
+            <div className={styles.list}> <img src={img} className='randomImg' />
+                <label>{`${firstname} ${lastname}`}</label>
+            </div>
 
             {
                 features.map((item) => (

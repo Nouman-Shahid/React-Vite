@@ -6,3 +6,7 @@ body {
     overflow-x: hidden;
 
 }
+
+.randomImg {
+    border-radius: 50%;
+}

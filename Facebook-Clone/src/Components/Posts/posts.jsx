@@ -74,7 +74,7 @@ const posts = ({ fullimg, firstname }) => {
             <div className={styles.post}>
 
                 <div className={styles.addpost}>
-                    <img src="public/user.png" alt="Facebook Logo" />
+                    <img className='randomImg' src={fullimg} />
                     <input type='text' placeholder={`What's on your mind, ${firstname}?`} />
                 </div>
 
