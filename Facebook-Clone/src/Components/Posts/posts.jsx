@@ -32,17 +32,17 @@ const posts = () => {
         {
             userImage: 'public/person1.png',
             userName: 'Muhammad Salman',
-            userPost: 'public/user3.jpg'
+            userPost: 'public/story3.jpg'
         },
         {
             userImage: 'public/person2.png',
             userName: 'Umer Ahmed',
-            userPost: 'public/user2.jpeg'
+            userPost: 'public/story2.jpeg'
         },
         {
             userImage: 'public/person3.png',
             userName: 'Agha Ali',
-            userPost: 'public/user1.jpeg'
+            userPost: 'public/story1.jpeg'
         },
     ]
 
@@ -52,7 +52,7 @@ const posts = () => {
             <div className={styles.stories}>
 
                 <div className={styles.card}>
-                    <img src="public/user.jpg" alt="" />
+                    <img src="public/user.jpeg" alt="" />
                     <FaCirclePlus className={styles.add} />
                     <h5>Create Story</h5>
                 </div>
