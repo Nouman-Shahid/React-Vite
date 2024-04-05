@@ -28,6 +28,10 @@
     cursor: pointer;
 }
 
+.card .st {
+    height: 32vh;
+}
+
 .card:hover {
     opacity: 0.8;
 }

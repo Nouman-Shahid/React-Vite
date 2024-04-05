@@ -94,3 +94,98 @@
     height: 6.5vh;
     cursor: pointer;
 }
+
+.nav .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+    width: 25vw;
+    position: absolute;
+    right: 2vw;
+    top: 8vh;
+    border-radius: 1.5vh;
+    background-color: #242526;
+    border: 2px solid rgb(36, 34, 34);
+}
+
+.profile .container {
+    height: 25%;
+    width: 90%;
+    box-shadow: 1vh 1vh 1vh #1d1b1b;
+    padding: 2vh 0;
+}
+
+.container .list {
+    font-weight: 600;
+    color: #d3d5d9;
+    padding: 1.8vh;
+    border-radius: 1.5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.container .list:hover {
+    cursor: pointer;
+    background-color: #3a3b3c;
+}
+
+.container .list label {
+    margin: 0 2vh;
+}
+
+.container .list img {
+    height: 6.5vh;
+}
+
+.container hr {
+    width: 90%;
+    border: 1px solid #3E4042;
+    opacity: 0.7;
+}
+
+.container button {
+    all: unset;
+    text-align: center;
+    margin: 0 1.4vw;
+    width: 85%;
+    cursor: pointer;
+    padding: 1vh;
+    font-size: 2.5vh;
+    background-color: #3A3B3C;
+    color: #ecedf0;
+    border-radius: 1vh;
+}
+
+.container button:hover {
+    background-color: #595a5c;
+
+}
+
+.profile .list2 {
+    font-weight: 600;
+    width: 85%;
+    color: #d3d5d9;
+    padding: 1.8vh;
+    border-radius: 1.5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    overflow-y: auto;
+}
+
+.profile .list2:hover {
+    background-color: #3a3b3c;
+}
+
+.profile .list2 label {
+    margin: 0 2vh;
+}
+
+.profile .list2 img {
+    height: 4.5vh;
+}

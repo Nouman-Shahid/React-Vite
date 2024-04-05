@@ -18,7 +18,7 @@ const posts = ({ fullimg, firstname }) => {
         },
         {
             userImage: 'public/person2.png',
-            userStory: 'public/story2.jpeg',
+            userStory: 'public/story4.png',
             userName: 'Saeed Ali',
         },
         {
@@ -60,7 +60,7 @@ const posts = ({ fullimg, firstname }) => {
                 {
                     stories.map((item) => (
                         <div className={styles.card}>
-                            <img src={item.userStory} />
+                            <img src={item.userStory} className={styles.st} />
                             <img src={item.userImage} className={styles.user} />
                             <h5>{item.userName}</h5>
                         </div>
