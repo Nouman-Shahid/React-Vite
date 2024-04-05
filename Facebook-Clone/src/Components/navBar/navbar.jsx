@@ -67,7 +67,7 @@ const Navbar = () => {
 
             <div className={styles.right}>
 
-                <button     ><BsFillGrid3X3GapFill size='1.3em' color='#c6cace' /> </button>
+                <button><BsFillGrid3X3GapFill size='1.3em' color='#c6cace' /> </button>
                 <button><FaFacebookMessenger size='1.3em' color='#c6cace' /> </button>
                 <button><RiNotification4Fill size='1.3em' color='#c6cace' /> </button>
                 <img src="public/user.png" />
