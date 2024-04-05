@@ -5,7 +5,7 @@ import Posts from '../Posts/posts';
 import Rightbar from '../rightSideBar/rightbar';
 import styles from './page.module.css'
 
-const Page = () => {
+const Page = ({ firstname, fullname, img, fullimg }) => {
     const [firstName, setFirstName] = useState('');
     const [firstImage, setFirstImage] = useState('');
 
@@ -26,11 +26,11 @@ const Page = () => {
     return (
         <>
 
-            <Navbar />
+            <Navbar img={img} />
 
             <div className={styles.page}>
-                <Leftbar />
-                <Posts />
+                <Leftbar img={img} fullname={fullname} />
+                <Posts fullimg={fullimg} firstname={firstname} />
                 <Rightbar />
             </div>
 

@@ -28,12 +28,13 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    cursor: pointer;
     overflow-y: auto;
 }
 
 .rightnav .list:hover {
     background-color: #3a3b3c;
+    cursor: pointer;
+
 }
 
 .rightnav .list label {

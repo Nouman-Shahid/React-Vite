@@ -8,7 +8,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 
 
-const posts = () => {
+const posts = ({ fullimg, firstname }) => {
 
     let stories = [
         {
@@ -37,12 +37,12 @@ const posts = () => {
         {
             userImage: 'public/person2.png',
             userName: 'Umer Ahmed',
-            userPost: 'public/story2.jpeg'
+            userPost: 'public/post1.jpg'
         },
         {
             userImage: 'public/person3.png',
             userName: 'Agha Ali',
-            userPost: 'public/story1.jpeg'
+            userPost: 'public/post2.jpeg'
         },
     ]
 
@@ -52,7 +52,7 @@ const posts = () => {
             <div className={styles.stories}>
 
                 <div className={styles.card}>
-                    <img src="public/user.jpeg" alt="" />
+                    <img src={fullimg} alt="" />
                     <FaCirclePlus className={styles.add} />
                     <h5>Create Story</h5>
                 </div>
@@ -75,7 +75,7 @@ const posts = () => {
 
                 <div className={styles.addpost}>
                     <img src="public/user.png" alt="Facebook Logo" />
-                    <input type='text' placeholder="What's on your mind, Numan?" />
+                    <input type='text' placeholder={`What's on your mind, ${firstname}?`} />
                 </div>
 
                 <hr />
@@ -83,15 +83,15 @@ const posts = () => {
                 <div className={styles.share}>
 
                     <div className={styles.text}>
-                        <RiVideoAddFill size='1.8em' color='#F23E5C' />
+                        <RiVideoAddFill className={styles.icon} size='1.8em' color='#F23E5C' />
                         <h4>Live Video</h4>
                     </div>
                     <div className={styles.text}>
-                        <MdPhotoLibrary size='1.8em' color='#58C472' />
+                        <MdPhotoLibrary className={styles.icon} size='1.8em' color='#58C472' />
                         <h4>Photo/video</h4>
                     </div>
                     <div className={styles.text}>
-                        <BiHappyAlt size='1.8em' color='#F8C03E' />
+                        <BiHappyAlt className={styles.icon} size='1.8em' color='#F8C03E' />
                         <h4>Feeling/activity</h4>
                     </div>
 
@@ -100,29 +100,28 @@ const posts = () => {
             </div>
 
 
-            <div className={styles.largepost}>
-                {
-                    posts.map((item) => (
-                        <>
-                            <div className={styles.imagepost}>
-                                <div className={styles.addpost}>
-                                    <img src={item.userImage} />
-                                    <h4>{item.userName}</h4>
-                                </div>
+            {
+                posts.map((item) => (
+                    <div className={styles.largepost}>
 
-                                <div className={styles.icons}>
-
-                                    <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                                    <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                                </div>
+                        <div className={styles.imagepost}>
+                            <div className={styles.addpost}>
+                                <img src={item.userImage} />
+                                <h4>{item.userName}</h4>
                             </div>
 
-                            <img src={item.userPost} className={styles.img} />
-                        </>
-                    ))
-                }
+                            <div className={styles.icons}>
 
-            </div>
+                                <BsThreeDots size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                                <RxCross1 size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                            </div>
+                        </div>
+
+                        <img src={item.userPost} className={styles.img} />
+                    </div>
+                ))
+            }
+
 
 
 

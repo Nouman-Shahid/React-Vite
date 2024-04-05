@@ -10,7 +10,7 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { RiNotification4Fill } from "react-icons/ri";
 
 
-const Navbar = () => {
+const Navbar = ({ img }) => {
     const [activeBtn, setActiveBtn] = useState('btn1');
 
     const handleOnClick = (btnId) => {
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <button><BsFillGrid3X3GapFill size='1.3em' color='#c6cace' /> </button>
                 <button><FaFacebookMessenger size='1.3em' color='#c6cace' /> </button>
                 <button><RiNotification4Fill size='1.3em' color='#c6cace' /> </button>
-                <img src="public/user.png" />
+                <img src={img} />
 
 
             </div>
