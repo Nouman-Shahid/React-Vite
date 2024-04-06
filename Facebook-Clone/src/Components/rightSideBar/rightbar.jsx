@@ -18,6 +18,7 @@ const rightbar = ({ lastname, group }) => {
             img: 'public/person3.png'
         },
     ]
+
     return (
         <div className={styles.rightnav}>
 

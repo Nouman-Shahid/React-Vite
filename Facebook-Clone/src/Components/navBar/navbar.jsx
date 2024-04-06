@@ -8,11 +8,11 @@ import { RiGamepadLine } from "react-icons/ri";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { RiNotification4Fill } from "react-icons/ri";
-import { IoStatsChartSharp } from "react-icons/io5";
-import { BiSolidHeartCircle } from "react-icons/bi";
-import { BiSolidCalendarStar } from "react-icons/bi";
-import { SiFacebookgaming } from "react-icons/si";
-import { GiSwipeCard } from "react-icons/gi";
+import { MdSettings } from "react-icons/md";
+import { IoMdHelpCircle } from "react-icons/io";
+import { IoMdMoon } from "react-icons/io";
+import { RiFeedbackFill } from "react-icons/ri";
+import { IoLogOut } from "react-icons/io5";
 
 const Navbar = ({ firstname, lastname, img, handleAPI }) => {
     const [activeBtn, setActiveBtn] = useState('btn1');
@@ -53,7 +53,29 @@ const Navbar = ({ firstname, lastname, img, handleAPI }) => {
             size: '1.8em',
             icon: RiGamepadLine,
         },
+    ]
 
+    let profileBtn = [
+        {
+            name: 'Settings & privacy',
+            icon: MdSettings,
+        },
+        {
+            name: 'Help & support',
+            icon: IoMdHelpCircle,
+        },
+        {
+            name: 'Display & accessibility',
+            icon: IoMdMoon,
+        },
+        {
+            name: 'Give feedback',
+            icon: RiFeedbackFill,
+        },
+        {
+            name: 'Log Out',
+            icon: IoLogOut,
+        },
     ]
 
     return (
@@ -67,9 +89,10 @@ const Navbar = ({ firstname, lastname, img, handleAPI }) => {
 
                 {
                     icons.map((item) => (
-                        <button style={{ color: activeBtn === item.id ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick(item.id)}>
+                        <button key={item.id} style={{ color: activeBtn === item.id ? '#0866ff' : '#b8bbbf' }} onClick={() => handleOnClick(item.id)}>
                             <item.icon size={item.size} />
                         </button>
+
                     ))
                 }
 
@@ -97,11 +120,13 @@ const Navbar = ({ firstname, lastname, img, handleAPI }) => {
                         <button onClick={handleAPI}>Switch Profile</button>
                     </div>
 
-                    <div className={styles.list2}><IoStatsChartSharp size='1.3em' color='#1a79df' /> <label>Ads Manager</label></div>
-                    <div className={styles.list2}><BiSolidCalendarStar size='1.3em' color='#F0ACB9' /> <label >Events</label></div>
-                    <div className={styles.list2}><BiSolidHeartCircle size='1.3em' style={{ backgroundColor: 'red', borderRadius: '5vh' }} color='#F7C74D' /> <label >Fundraisers</label></div>
-                    <div className={styles.list2}><SiFacebookgaming size='1.2em' color='#3CB5F0' /> <label >Gaming Videos</label></div>
-                    <div className={styles.list2}><GiSwipeCard size='1.3em' color='#1D3963' /> <label >Orders and payments</label></div>
+
+                    {
+                        profileBtn.map((item) => (
+                            <div key={item.name} className={styles.list2}><item.icon className={styles.btn} size='1.5em' color='#E4E6EA' />
+                                <label>{item.name}</label></div>
+                        ))
+                    }
 
                 </div>
 

@@ -10,6 +10,8 @@ import { RxCross1 } from "react-icons/rx";
 
 const posts = ({ fullimg, firstname }) => {
 
+
+
     let stories = [
         {
             userImage: 'public/person1.png',
