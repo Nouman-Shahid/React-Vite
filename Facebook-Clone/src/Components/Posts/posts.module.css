@@ -154,8 +154,9 @@
     flex-direction: column;
     align-items: center;
     width: 85%;
-    height: 83vh;
+    height: auto;
     margin: 2vh 0;
+    padding: 1vh;
 }
 
 .largepost .imagepost {
@@ -199,4 +200,12 @@
     height: 100%;
     width: 100%;
     margin: 1vh 0;
+}
+
+.btns {
+    width: 90%;
+    padding: 1vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

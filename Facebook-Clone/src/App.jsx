@@ -10,22 +10,7 @@ function App() {
   const [firstImage, setFirstImage] = useState('public/user.png');
   const [groupName, setgroupName] = useState('10-D');
 
-  // const [articles, setArticles] = useState([]);
 
-  // let newsAPI = async () => {
-  //   try {
-  //     const response = await fetch('https://newsapi.org/v2/everything?q=tesla&from=2024-03-06&sortBy=publishedAt&apiKey=6464e885a15d4542a99f728cd608c184');
-  //     const data = await response.json();
-  //     const randomIndexes = articles.from({ length: 100 }, (_, i) => i).sort(() => 0.5 - Math.random()).slice(0, 5);
-  //     const selectedArticles = randomIndexes.map(index => data.articles[index]);
-  //     setArticles(selectedArticles);
-  //     console.log(selectedArticles)
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // }
-
-  // newsAPI()
 
   let randomUserAPI = async () => {
     try {

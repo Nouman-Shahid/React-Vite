@@ -6,6 +6,9 @@ import { BiHappyAlt } from "react-icons/bi";
 import { MdPhotoLibrary } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
+import { AiFillLike } from "react-icons/ai";
+import { FaComment } from "react-icons/fa";
+import { FaShare } from "react-icons/fa";
 
 
 const posts = ({ fullimg, firstname }) => {
@@ -120,6 +123,12 @@ const posts = ({ fullimg, firstname }) => {
                         </div>
 
                         <img src={item.userPost} className={styles.img} />
+
+                        <div className={styles.btns}>
+                            <AiFillLike size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                            <FaComment size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                            <FaShare size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                        </div>
                     </div>
                 ))
             }
