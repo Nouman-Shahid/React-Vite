@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 85%;
+    width: 87.2%;
     margin: 4vh 0;
     height: 23vh;
 }
@@ -125,4 +125,12 @@
 .post p {
     color: white;
     padding: 1vh 2vh;
+}
+
+.a {
+    cursor: pointer;
+}
+
+.a:hover {
+    scale: 1.1;
 }

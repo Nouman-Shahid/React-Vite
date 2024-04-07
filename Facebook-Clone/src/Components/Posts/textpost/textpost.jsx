@@ -10,29 +10,31 @@ import { RxCross1 } from "react-icons/rx";
 const textpost = ({ firstname, lastname, fullimg }) => {
 
     let [post, setPosts] = useState([
-        {
-            userImg: fullimg,
-            userName: `${firstname} ${lastname}`,
-            postText: 'Hello World :)',
-        },
+        // {
+        //     userImg: fullimg,
+        //     userName: `${firstname} ${lastname}`,
+        //     postText: 'Hello World :)',
+        // },
     ]);
 
-    const removeElement = (text) => {
-        // const newPosts = post.filter((item) => (item.postText != text));
-        // setPosts(newPosts);
-    };
-
-    const getValue = (event) => {
+    const addPost = (event) => {
         if (event.key === 'Enter') {
             let newPost = event.target.value
             event.target.value = ""
             let newarr = [...post, {
-                title: newPost
+                postText: newPost,
+                userImg: fullimg,
+                userName: `${firstname} ${lastname}`,
             }]
             setPosts(newarr)
             console.log(newarr)
         }
     }
+    const removePost = (text) => {
+        const arrangedposts = post.filter((item) => (item.postText !== text))
+        setPosts(arrangedposts)
+    };
+
 
     let icons = [
         {
@@ -57,11 +59,10 @@ const textpost = ({ firstname, lastname, fullimg }) => {
             <div className={styles.postInput}>
                 <div className={styles.addpost}>
                     <img className='randomImg' src={fullimg} alt="" />
-                    <input type='text' onKeyDown={getValue} value={post.postText} placeholder={`What's on your mind, ${firstname}?`} />
+                    <input type='text' onKeyDown={addPost} placeholder={`What's on your mind, ${firstname}?`} />
                 </div>
 
                 <hr />
-
 
                 <div className={styles.share}>
                     {
@@ -87,7 +88,8 @@ const textpost = ({ firstname, lastname, fullimg }) => {
                             </div>
                             <div className={styles.icons}>
                                 <BsThreeDots className={styles.a} size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                                <RxCross1 onClick={removeElement(item.postText)} className={styles.a} size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                                <RxCross1 onClick={() => removePost(item.postText)} className={styles.a} size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+
                             </div>
                         </div>
                         <div className={styles.post}>

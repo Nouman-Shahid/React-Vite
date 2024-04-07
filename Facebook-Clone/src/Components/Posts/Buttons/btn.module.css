@@ -1,23 +1,35 @@
+.hr {
+    width: 95%;
+    border: 1px solid #3E4042;
+    margin-top: 4vh;
+    opacity: 0.7;
+}
+
 .btns {
-    width: 90%;
-    padding: 1vh 0;
+    width: 95%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.btns .b {
-    width: 100%;
-    border-radius: 1vh;
+.btns .text {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    padding: 1vh 4vh;
-
+    color: rgb(163, 163, 163);
+    border-radius: 1vh;
+    padding: 1vh 0;
+    margin: 1vh 1vh;
+    height: 4vh;
+    width: 90%;
 }
 
-.b:hover {
-    scale: 1.05;
+.btns .text:hover {
     background-color: #3E4042;
 }
+
+
 
 .emojies {
     display: flex;

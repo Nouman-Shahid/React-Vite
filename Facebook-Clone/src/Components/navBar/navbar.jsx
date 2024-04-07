@@ -14,7 +14,7 @@ import { IoMdMoon } from "react-icons/io";
 import { RiFeedbackFill } from "react-icons/ri";
 import { IoLogOut } from "react-icons/io5";
 
-const Navbar = ({ firstname, lastname, img, handleAPI }) => {
+const Navbar = ({ firstname, lastname, img, handleAPI, handleNewsAPI }) => {
     const [activeBtn, setActiveBtn] = useState('btn1');
 
     const [isClicked, setIsClicked] = useState(false)
@@ -116,8 +116,8 @@ const Navbar = ({ firstname, lastname, img, handleAPI }) => {
                             <label>{`${firstname} ${lastname}`}</label>
                         </div>
                         <hr />
-
-                        <button onClick={handleAPI}>Switch Profile</button>
+                        <button onClick={() => { handleAPI(); handleNewsAPI(); }}>Switch Profile</button>
+                        );
                     </div>
 
 
