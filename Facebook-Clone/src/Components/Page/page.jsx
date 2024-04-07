@@ -15,7 +15,7 @@ const Page = ({ firstname, lastname, img, group, handleAPI }) => {
 
             <div className={styles.page}>
                 <Leftbar img={img} firstname={firstname} lastname={lastname} />
-                <Posts fullimg={img} firstname={firstname} />
+                <Posts fullimg={img} firstname={firstname} lastname={lastname} />
                 <Rightbar lastname={lastname} group={group} />
             </div>
 

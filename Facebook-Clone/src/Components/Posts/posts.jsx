@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
 import Textpost from './textpost/textpost';
+import Buttons from './Buttons/btn';
 import styles from './posts.module.css'
 import { FaCirclePlus } from "react-icons/fa6";
 import { BsThreeDots } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
-import { GrLike } from "react-icons/gr";
-import { FaRegComment } from "react-icons/fa";
-import { FaRegShareSquare } from "react-icons/fa";
 
 
-const Posts = ({ fullimg, firstname }) => {
-    const [hoverState, setHoverState] = useState({});
+const Posts = ({ fullimg, firstname, lastname }) => {
 
     let posts = [
         {
@@ -33,22 +30,6 @@ const Posts = ({ fullimg, firstname }) => {
         },
     ]
 
-
-
-    const handleMouseOver = (postId) => {
-        setHoverState(prevState => ({
-            ...prevState,
-            [postId]: true
-        }));
-    };
-
-    const handleMouseOut = (postId) => {
-        setHoverState(prevState => ({
-            ...prevState,
-            [postId]: false
-        }));
-    };
-
     const stories = [
         {
             userImage: 'public/person1.png',
@@ -68,28 +49,6 @@ const Posts = ({ fullimg, firstname }) => {
     ];
 
 
-
-    let emojis = [
-        {
-            img: 'public/like.gif'
-        },
-        {
-            img: 'public/love.gif'
-        },
-        {
-            img: 'public/laugh.gif'
-        },
-        {
-            img: 'public/suprised.gif'
-        },
-        {
-            img: 'public/sad.gif'
-        },
-        {
-            img: 'public/angry.gif'
-        }
-    ]
-
     return (
         <main className={styles.main}>
             <div className={styles.stories}>
@@ -108,7 +67,7 @@ const Posts = ({ fullimg, firstname }) => {
                 ))}
             </div>
 
-            <Textpost firstname={firstname} fullimg={fullimg} />
+            <Textpost firstname={firstname} lastname={lastname} fullimg={fullimg} />
 
             {posts.map((item) => (
                 <div key={item.id} className={styles.largepost}>
@@ -127,22 +86,10 @@ const Posts = ({ fullimg, firstname }) => {
                         className={styles.img}
                         alt={`Post by ${item.userName}`}
 
-                    /> {hoverState[item.id] && (
-                        <div className={styles.emojies} onMouseOut={() => handleMouseOut(item.id)} onMouseOver={() => handleMouseOver(item.id)}>
-                            {
-                                emojis.map((emoji, index) => (
-                                    <img key={index} src={emoji.img} />
-                                ))
-                            }
-                        </div>
-                    )}
-                    <div className={styles.btns}>
-                        <GrLike onMouseOver={() => handleMouseOver(item.id)}
-                            onMouseOut={() => handleMouseOut(item.id)} className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <FaRegComment className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <FaRegShareSquare className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                    </div>
+                    />
 
+
+                    <Buttons id={item.id} />
 
 
                 </div>

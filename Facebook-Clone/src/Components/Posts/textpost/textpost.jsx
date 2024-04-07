@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
+import styles from './textpost.module.css'
+import Buttons from '../Buttons/btn';
 import { RiVideoAddFill } from "react-icons/ri";
 import { BiHappyAlt } from "react-icons/bi";
 import { MdPhotoLibrary } from "react-icons/md";
+import { BsThreeDots } from "react-icons/bs";
+import { RxCross1 } from "react-icons/rx";
 
-import styles from './textpost.module.css'
-
-const textpost = ({ firstname, fullimg }) => {
+const textpost = ({ firstname, lastname, fullimg }) => {
 
     let [post, setPosts] = useState([
         {
             userImg: fullimg,
-            userName: firstname,
+            userName: `${firstname} ${lastname}`,
             postText: 'Hello World :)',
         },
     ]);
 
-    const removeElement = (id) => {
-        // const newPosts = post.filter(item => item.id !== id);
+    const removeElement = (text) => {
+        // const newPosts = post.filter((item) => (item.postText != text));
         // setPosts(newPosts);
     };
 
@@ -49,6 +51,7 @@ const textpost = ({ firstname, fullimg }) => {
             color: '#F8C03E',
         },
     ]
+
     return (
         <>
             <div className={styles.postInput}>
@@ -72,6 +75,31 @@ const textpost = ({ firstname, fullimg }) => {
 
                 </div>
             </div>
+
+            {
+                (post.length > 0) &&
+                post.map((item) => (
+                    <div className={styles.textpost}>
+                        <div className={styles.imagepost}>
+                            <div className={styles.header}>
+                                <img src={item.userImg} alt={item.userName} />
+                                <h4>{item.userName}</h4>
+                            </div>
+                            <div className={styles.icons}>
+                                <BsThreeDots className={styles.a} size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                                <RxCross1 onClick={removeElement(item.postText)} className={styles.a} size='1.3em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                            </div>
+                        </div>
+                        <div className={styles.post}>
+                            <p>{item.postText}</p>
+                        </div>
+
+                        <Buttons />
+
+                    </div>
+                ))
+
+            }
 
 
 
