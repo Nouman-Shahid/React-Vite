@@ -154,7 +154,7 @@
     flex-direction: column;
     align-items: center;
     width: 85%;
-    height: auto;
+    height: 90vh;
     margin: 2vh 0;
     padding: 1vh;
 }
@@ -202,10 +202,49 @@
     margin: 1vh 0;
 }
 
+.a {
+    cursor: pointer;
+}
+
+.a:hover {
+    scale: 1.1;
+}
+
 .btns {
     width: 90%;
     padding: 1vh 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.btns .b {
+    cursor: pointer;
+}
+
+.b:hover {
+    scale: 1.05;
+
+}
+
+.emojies {
+    display: flex;
+    height: 6vh;
+    width: 100%;
+    position: relative;
+    background-color: #242526;
+    border-radius: 5vh;
+    padding: 0.5vh 1vh;
+    bottom: 20vh;
+    z-index: 100;
+    transition: 2s ease;
+}
+
+.emojies img {
+    margin: 0 0.5vh;
+}
+
+.emojies img:hover {
+    cursor: pointer;
+    transform: scale(1.2)
 }
