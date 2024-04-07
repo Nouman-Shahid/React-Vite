@@ -147,15 +147,7 @@ const Posts = ({ fullimg, firstname }) => {
                         className={styles.img}
                         alt={`Post by ${item.userName}`}
 
-                    />
-                    <div className={styles.btns}>
-                        <GrLike onMouseOver={() => handleMouseOver(item.id)}
-                            onMouseOut={() => handleMouseOut(item.id)} className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <FaRegComment className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                        <FaRegShareSquare className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
-                    </div>
-
-                    {hoverState[item.id] && (
+                    /> {hoverState[item.id] && (
                         <div className={styles.emojies} onMouseOut={() => handleMouseOut(item.id)} onMouseOver={() => handleMouseOver(item.id)}>
                             {
                                 emojis.map((emoji, index) => (
@@ -164,6 +156,14 @@ const Posts = ({ fullimg, firstname }) => {
                             }
                         </div>
                     )}
+                    <div className={styles.btns}>
+                        <GrLike onMouseOver={() => handleMouseOver(item.id)}
+                            onMouseOut={() => handleMouseOut(item.id)} className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                        <FaRegComment className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                        <FaRegShareSquare className={styles.b} size='1.5em' color='#B0B3B8' style={{ margin: '0 1vh' }} />
+                    </div>
+
+
 
                 </div>
             ))
