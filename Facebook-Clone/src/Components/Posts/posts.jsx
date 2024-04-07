@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
+import Textpost from './textpost/textpost';
 import styles from './posts.module.css'
 import { FaCirclePlus } from "react-icons/fa6";
-import { RiVideoAddFill } from "react-icons/ri";
-import { BiHappyAlt } from "react-icons/bi";
-import { MdPhotoLibrary } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 import { GrLike } from "react-icons/gr";
@@ -13,6 +11,29 @@ import { FaRegShareSquare } from "react-icons/fa";
 
 const Posts = ({ fullimg, firstname }) => {
     const [hoverState, setHoverState] = useState({});
+
+    let posts = [
+        {
+            id: 1,
+            userImage: 'public/person1.png',
+            userName: 'Muhammad Salman',
+            userPost: 'public/story3.jpg',
+        },
+        {
+            id: 2,
+            userImage: 'public/person2.png',
+            userName: 'Umer Ahmed',
+            userPost: 'public/post1.jpg',
+        },
+        {
+            id: 3,
+            userImage: 'public/person3.png',
+            userName: 'Agha Ali',
+            userPost: 'public/post2.jpeg',
+        },
+    ]
+
+
 
     const handleMouseOver = (postId) => {
         setHoverState(prevState => ({
@@ -46,26 +67,7 @@ const Posts = ({ fullimg, firstname }) => {
         },
     ];
 
-    const posts = [
-        {
-            id: 1,
-            userImage: 'public/person1.png',
-            userName: 'Muhammad Salman',
-            userPost: 'public/story3.jpg',
-        },
-        {
-            id: 2,
-            userImage: 'public/person2.png',
-            userName: 'Umer Ahmed',
-            userPost: 'public/post1.jpg',
-        },
-        {
-            id: 3,
-            userImage: 'public/person3.png',
-            userName: 'Agha Ali',
-            userPost: 'public/post2.jpeg',
-        },
-    ];
+
 
     let emojis = [
         {
@@ -106,29 +108,7 @@ const Posts = ({ fullimg, firstname }) => {
                 ))}
             </div>
 
-            <div className={styles.post}>
-                <div className={styles.addpost}>
-                    <img className='randomImg' src={fullimg} alt="" />
-                    <input type='text' placeholder={`What's on your mind, ${firstname}?`} />
-                </div>
-
-                <hr />
-
-                <div className={styles.share}>
-                    <div className={styles.text}>
-                        <RiVideoAddFill className={styles.icon} size='1.8em' color='#F23E5C' />
-                        <h4>Live Video</h4>
-                    </div>
-                    <div className={styles.text}>
-                        <MdPhotoLibrary className={styles.icon} size='1.8em' color='#58C472' />
-                        <h4>Photo/video</h4>
-                    </div>
-                    <div className={styles.text}>
-                        <BiHappyAlt className={styles.icon} size='1.8em' color='#F8C03E' />
-                        <h4>Feeling/activity</h4>
-                    </div>
-                </div>
-            </div>
+            <Textpost firstname={firstname} fullimg={fullimg} />
 
             {posts.map((item) => (
                 <div key={item.id} className={styles.largepost}>
