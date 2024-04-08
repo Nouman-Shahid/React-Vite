@@ -60,10 +60,13 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    padding: 1vh 2vh;
+    border-radius: 1vh;
+    transition: 0.5s ease;
 }
 
-.share .text .icon:hover {
-    scale: 1.1;
+.share :hover {
+    background-color: #3E4042;
 }
 
 .share .text h4 {

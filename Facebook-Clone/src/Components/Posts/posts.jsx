@@ -61,7 +61,6 @@ const Posts = ({ fullimg, firstname, lastname, posts }) => {
                     </div>
                     <h4 className={styles.p}>{item.title}</h4>
                     <p className={styles.p}>{item.description}</p>
-                    {/* Assuming the API response structure contains 'title', 'description', and 'urlToImage' */}
                     <img
                         src={item.urlToImage}
                         className={styles.img}

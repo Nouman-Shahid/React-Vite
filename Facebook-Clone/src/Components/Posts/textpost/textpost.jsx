@@ -10,11 +10,7 @@ import { RxCross1 } from "react-icons/rx";
 const textpost = ({ firstname, lastname, fullimg }) => {
 
     let [post, setPosts] = useState([
-        // {
-        //     userImg: fullimg,
-        //     userName: `${firstname} ${lastname}`,
-        //     postText: 'Hello World :)',
-        // },
+
     ]);
 
     const addPost = (event) => {

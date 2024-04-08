@@ -48,8 +48,8 @@
 .card .user {
     position: absolute;
     top: 0vh;
-    height: 1.5%;
-    width: 6.5%;
+    max-height: 1.8%;
+    max-width: 6.8%;
     object-fit: fill;
     border: 4px solid #075CE6;
     border-radius: 50%;
