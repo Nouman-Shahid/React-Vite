@@ -2,7 +2,7 @@ import React from 'react'
 
 const body = () => {
     return (
-        <main className=' flex px-24 justify-between items-center bg-blue-200 h-screen'>
+        <main className=' bg-gradient-to-r from-[#0D0E10] to-[#303538] flex px-24 justify-between items-center  h-screen'>
 
             <div className="flex-col  ">
                 <p className='text-4xl font-sans font-bold my-3'>Build your Apps with Bertix</p>
