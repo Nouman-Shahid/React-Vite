@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; import './App.css'
 import Navbar from './Components/Navbar'
+import Bottombar from './Components/Bottombar'
 import Home from './Components/Home'
 import Cart from './Components/Cart'
 import { useState, useEffect } from "react";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/" element={<Home products={products} />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Bottombar />
       </BrowserRouter>
 
 
