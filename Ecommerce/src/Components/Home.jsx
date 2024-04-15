@@ -5,6 +5,25 @@ import { FaSearch } from 'react-icons/fa';
 
 
 const Home = ({ products, userDetails }) => {
+
+    let cardItems = [
+        {
+            discount: '50% off',
+            code: 'with code FS3427',
+            img: 'public/bag.jpg'
+        },
+        {
+            discount: '50% off',
+            code: 'with code AV1880',
+            img: 'public/case.jpg'
+        },
+        {
+            discount: '70% off',
+            code: 'with code BD1923',
+            img: 'public/shoes.png'
+        },
+    ]
+
     return (
         <main className='flex flex-col h-auto w-screen items-center py-12 bg-gray-100  '>
 
@@ -15,7 +34,7 @@ const Home = ({ products, userDetails }) => {
             </div>
 
 
-            <div className="flex items-center rounded-[1vh] mt-2 bg-gray-200 px-3 py-1 w-[90%] border border-gray-300">
+            <div className="flex items-center rounded-[1vh] mt-2 bg-gray-300 px-3 py-1 w-[90%] border border-gray-300">
                 <FaSearch className='text-gray-400' />
                 <input className='text-gray-700 outline-none bg-transparent rounded-[1vh]  py-1 px-3' placeholder="Search..." />
             </div>
@@ -23,30 +42,22 @@ const Home = ({ products, userDetails }) => {
             <div className='overflow-x-scroll flex flex-wrap w-screen py-4 px-2'>
                 <div className="flex flex-row gap-6 p-2">
 
-                    <div className="flex flex-col h-[23vh] w-[75vw] rounded-[2vh]">
-                        <img src="public/bag.jpg" className='size-[100%] rounded-[2vh] opacity-70' />
-                        <div className="flex flex-col mt-[-22vh] px-2 w-fit  z-10">
-                            <p className='font-bold text-gray-100 font-serif'>50% off</p>
-                            <p className='text-[2.3vh] text-gray-100'>on everything today</p>
-                        </div>
-                        <div className="flex flex-col mt-[4vh] px-2 w-fit z-10">
-                            <p className='text-[1.8vh] font-semibold text-gray-100'>with code: FS3427</p>
-                            <button className='text-[2.2vh] font-sans font-semibold mt-2 bg-zinc-800 rounded-[1vh] text-gray-100 w-[90%] active:bg-zinc-700 '>Get Now</button>
-                        </div>
-                    </div>
-                    <div className="flex flex-col h-[23vh] w-[75vw] rounded-[2vh]">
-                        <img src="public/bag2.jpg" className='size-[100%] object-cover rounded-[2vh] opacity-70' />
-                        <div className="flex flex-col mt-[-22vh] px-2 w-fit  z-10">
-                            <p className='font-bold text-gray-100 font-serif'>50% off</p>
-                            <p className='text-[2.3vh] text-gray-100'>on everything today</p>
-                        </div>
-                        <div className="flex flex-col mt-[4vh] px-2 w-fit z-10">
-                            <p className='text-[1.8vh] font-semibold text-gray-100'>with code: FS3427</p>
-                            <button className='text-[2.2vh] font-sans font-semibold mt-2 bg-zinc-800 rounded-[1vh] text-gray-100 w-[90%] active:bg-zinc-700 '>Get Now</button>
-                        </div>
-                    </div>
+                    {
+                        cardItems.map((item) => (
+                            <div key={item.code} className="flex flex-col h-[23vh] w-[75vw] rounded-[2vh]">
+                                <img src={item.img} className='size-[100%] rounded-[2vh] opacity-80' />
+                                <div className="flex flex-col mt-[-22vh] px-2 w-fit  z-10">
+                                    <p className='font-bold text-gray-100 font-serif'>{item.discount}</p>
+                                    <p className='text-[2.3vh] text-gray-100'>on everything today</p>
+                                </div>
+                                <div className="flex flex-col mt-[4vh] px-2 w-fit z-10">
+                                    <p className='text-[1.8vh] font-semibold text-gray-100'>{item.code}</p>
+                                    <button className='text-[2.2vh] font-sans font-semibold mt-2 bg-zinc-800 rounded-[1vh] border border-gray-600 text-gray-100 w-[90%] active:bg-zinc-700 '>Get Now</button>
+                                </div>
+                            </div>
+                        ))
 
-
+                    }
                 </div>
             </div>
 
