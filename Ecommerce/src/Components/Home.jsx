@@ -54,7 +54,7 @@ const Home = ({ products }) => {
                         <div className="flex items-center justify-start w-[100%] space-x-1 ">
                             <p className='text-[1.8vh] border border-gray-400 px-1 text-gray-600 font-semibold my-1'>Free Delivery</p>
                         </div>
-                        <button className='text-gray-100 bg-yellow-500 w-[100%] py-1  my-3 rounded-[1vh]'>Add to cart</button>
+                        <button className='text-gray-100 bg-yellow-500 active:bg-yellow-700 w-[100%] py-1  my-3 rounded-[1vh]'>Add to cart</button>
                     </div>
                 ))}
             </div>
