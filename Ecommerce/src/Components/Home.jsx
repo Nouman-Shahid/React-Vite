@@ -34,6 +34,17 @@ const Home = ({ products, userDetails }) => {
                             <button className='text-[2.2vh] font-sans font-semibold mt-2 bg-zinc-800 rounded-[1vh] text-gray-100 w-[90%] active:bg-zinc-700 '>Get Now</button>
                         </div>
                     </div>
+                    <div className="flex flex-col h-[23vh] w-[75vw] rounded-[2vh]">
+                        <img src="public/bag2.jpg" className='size-[100%] object-cover rounded-[2vh] opacity-70' />
+                        <div className="flex flex-col mt-[-22vh] px-2 w-fit  z-10">
+                            <p className='font-bold text-gray-100 font-serif'>50% off</p>
+                            <p className='text-[2.3vh] text-gray-100'>on everything today</p>
+                        </div>
+                        <div className="flex flex-col mt-[4vh] px-2 w-fit z-10">
+                            <p className='text-[1.8vh] font-semibold text-gray-100'>with code: FS3427</p>
+                            <button className='text-[2.2vh] font-sans font-semibold mt-2 bg-zinc-800 rounded-[1vh] text-gray-100 w-[90%] active:bg-zinc-700 '>Get Now</button>
+                        </div>
+                    </div>
 
 
                 </div>
