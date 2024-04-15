@@ -29,14 +29,14 @@ const Bottombar = () => {
             path: '/cart'
         },
         {
-            text: 'Settings',
+            text: 'Accounts',
             icon: IoSettings,
             path: '/settings'
         },
     ];
 
     return (
-        <nav className='fixed bottom-0 h-[8vh] px-10 w-screen flex items-center justify-between bg-gray-100'>
+        <nav className='fixed bottom-0 h-[8vh] px-10 w-screen flex items-center justify-between border-t-2 border-gray-300 bg-gray-100'>
             {icons.map((item, index) => (
                 <Link to={item.path} key={index}>
                     <div className="flex flex-col items-center" onClick={() => handleClick(index)}>

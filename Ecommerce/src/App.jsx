@@ -5,14 +5,13 @@ import Bottombar from './Components/Bottombar'
 import Home from './Components/Home'
 import Cart from './Components/Cart'
 import { useState, useEffect } from "react";
+import Settings from "./Components/Settings";
 
 function App() {
 
   const [products, setProducts] = useState([]);
 
-  const [userImg, setUserImg] = useState();
-  const [userName, setUserName] = useState();
-  const [userEmail, setUserEmail] = useState();
+  const [userDetails, setUserDetails] = useState();
 
   const handleProductsAPI = async () => {
     try {
@@ -30,17 +29,12 @@ function App() {
     try {
       const response = await fetch('https://randomuser.me/api/');
       const data = await response.json();
-      const firstName = data.results[0].name.first;
-      const lastName = data.results[0].name.last;
-      const newUserImg = data.results[0].picture.medium;
-      const newUserName = `${firstName} ${lastName}`;
-      const newUserEmail = firstName.toLowerCase() + '@gmail.com'
 
-      setUserEmail(newUserEmail);
-      setUserName(newUserName);
-      setUserImg(newUserImg);
+      const user = data.results[0]
 
-      console.log(data);
+      setUserDetails(user);
+      console.log(user);
+
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
@@ -56,10 +50,11 @@ function App() {
     <>
 
       <BrowserRouter>
-        <Navbar userName={userName} userImg={userImg} userEmail={userEmail} handleUserAPI={handleUserAPI} />
+        <Navbar userDetails={userDetails} />
         <Routes>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/settings" element={<Settings userDetails={userDetails} handleUserAPI={handleUserAPI} />} />
         </Routes>
         <Bottombar />
       </BrowserRouter>

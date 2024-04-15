@@ -5,11 +5,11 @@ import { FaStar } from "react-icons/fa6";
 
 const Home = ({ products }) => {
     return (
-        <main className='flex flex-col h-auto w-screen items-center py-16  '>
+        <main className='flex flex-col h-auto w-screen items-center py-12 bg-gray-100  '>
 
             <div className='w-screen h-[45vh] opacity-90' ></div>
 
-            <div className="flex flex-col absolute top-[9.5vh] h-[45vh] w-screen bg-black/[.7] justify-between py-20  px-10">
+            <div className="flex flex-col absolute top-[9.5vh] h-[45vh] w-screen bg-black/[.7] justify-between py-12  px-10">
                 <p className='text-[3vh] font-semibold text-white '>Looking for something special?</p>
                 <ReactTyped strings={["Elegant Women's Attire.", "Sleek Men's Fashion.", "Fashion-forward Accessories.",]} typeSpeed={70} backSpeed={60} className=' text-[3vh] font-bold text-blue-300  font-sans' loop />
 
@@ -22,7 +22,7 @@ const Home = ({ products }) => {
                     {
                         products.sort((a, b) => b.id - a.id).map((item, index) => (
                             <div key={index} className="flex flex-col border w-[35vw] border-zinc-300 p-1 my-2 items-center rounded-[1vh]">
-                                <img src={item.image} className='size-[9vh] object-fill ' alt={`Product ${index}`} />
+                                <img src={item.image} className='size-[9vh] object-fill mix-blend-multiply ' alt={`Product ${index}`} />
                                 <div className="flex items-center justify-start w-[100%] mt-3 space-x-1 ">
                                     <FaStar className='size-[2vh] text-yellow-500' />
                                     <p className='text-[2vh] text-gray-500'>{`${item.rating.rate} (${item.rating.count})`}</p>
@@ -41,7 +41,7 @@ const Home = ({ products }) => {
             <div className="flex flex-row flex-wrap justify-center">
                 {products.sort((a, b) => a.id - b.id).map((item) => (
                     <div className="flex flex-col h-auto w-[45vw] border items-center justify-center border-zinc-300 p-2 m-2 rounded-2xl" key={item.id}>
-                        <img src={item.image} className='size-[19vh] object-fill' />
+                        <img src={item.image} className='size-[19vh] object-fill mix-blend-multiply' />
                         <p className='text-[2.2vh] m-1 font-semibold'>
                             {item.title.split(' ').slice(0, 4).join(' ')}
                             {item.title.split(' ').length > 4 ? ' ...' : ''}
