@@ -52,7 +52,7 @@ function App() {
       <BrowserRouter>
         <Navbar userDetails={userDetails} />
         <Routes>
-          <Route path="/" element={<Home products={products} />} />
+          <Route path="/" element={<Home products={products} userDetails={userDetails} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/settings" element={<Settings userDetails={userDetails} handleUserAPI={handleUserAPI} />} />
         </Routes>

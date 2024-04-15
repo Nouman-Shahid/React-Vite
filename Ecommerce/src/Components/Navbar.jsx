@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { BiSearchAlt2 } from "react-icons/bi";
 
 const Navbar = ({ userDetails }) => {
     return (
@@ -20,7 +19,6 @@ const Navbar = ({ userDetails }) => {
                 <li>Contact</li>
             </ul>
             <div className="flex space-x-2 items-center">
-                <BiSearchAlt2 className='size-[4vh] text-blue-500 ' />
                 {userDetails && userDetails.picture && (
                     <img src={userDetails.picture.medium} alt={userDetails.name.first} className='rounded-[50%] size-[5.5vh]' />
                 )}
