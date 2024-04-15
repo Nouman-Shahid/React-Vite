@@ -25,13 +25,13 @@ const Settings = ({ userDetails, handleUserAPI }) => {
     ];
 
     return (
-        <main className='flex flex-col h-[auto] w-screen pt-12 bg-gray-100 '>
-            <div className="flex flex-col items-center justify-evenly h-[32vh] bg-blue-500 py-3">
+        <main className='flex flex-col h-[auto] w-screen pt-2 bg-gray-100 '>
+            <div className="flex flex-col items-center justify-evenly h-[32vh] bg-gray-800 py-3">
                 <div className="flex">
-                    <p className='text-white font-bold text-xl font-sans'>Account Setting</p>
+                    <p className='text-white font-bold text-xl font-sans'>Profile Setting</p>
                 </div>
                 {userDetails?.picture && (
-                    <img src={userDetails.picture.medium} className='size-[18vh] shadow-blue-700 shadow-xl rounded-[50%]' alt="User avatar" />
+                    <img src={userDetails.picture.medium} className='size-[18vh] shadow-gray-800 shadow-xl rounded-[50%]' alt="User avatar" />
                 )}
             </div>
             <div className="flex flex-col h-[70vh] px-3 py-2 ">
@@ -41,7 +41,7 @@ const Settings = ({ userDetails, handleUserAPI }) => {
                         <p className='italic font-serif bg-transparent border-b h-[5.5vh] text-gray-600 border-zinc-200 w-[95%] outline-none px-1 my-1'>{item.value} </p>
                     </div>
                 ))}
-                <button onClick={handleUserAPI} className='bg-blue-500 p-2 rounded-[1vh] my-3 text-blue-100 active:bg-blue-600'>Switch Account</button>
+                <button onClick={handleUserAPI} className='bg-gray-800 p-2 rounded-[1vh] my-3 text-gray-200 active:bg-gray-600'>Switch Account</button>
             </div>
         </main>
     );
