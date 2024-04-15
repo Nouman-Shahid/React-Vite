@@ -2,15 +2,7 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { BiSearchAlt2 } from "react-icons/bi";
 
-
-
-
-
 const Navbar = ({ userName, userImg }) => {
-
-
-
-
 
     return (
         <nav className='flex fixed w-screen h-[8vh] bg-gray-100 justify-between items-center px-4 z-10'>
