@@ -40,7 +40,7 @@ const Bottombar = () => {
     ];
 
     return (
-        <nav className='fixed bottom-0 h-[8vh] px-10 w-screen flex items-center justify-between border-t-2 border-gray-300 bg-gray-100 z-10'>
+        <nav className='fixed bottom-0 h-[8vh] px-10 w-screen flex items-center justify-between border-t-2 border-gray-300 bg-gray-100 z-10 md:hidden'>
             {icons.map((item) => (
                 <Link to={item.path} key={item.id}>
                     <div className="flex flex-col items-center" onClick={() => handleClick(item.id)}>
