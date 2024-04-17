@@ -16,7 +16,6 @@ const Home = ({ products, userDetails }) => {
                 <p className='text-[2.7vh] font-bold text-gray-500 '>back {userDetails && userDetails.name && <ReactTyped strings={[userDetails.name.first]} typeSpeed={100} />}</p>
             </div>
 
-
             <div className="flex items-center rounded-[1vh] mt-2 bg-gray-200 px-3 py-1 w-[90%] border-2 border-gray-300">
                 <FaSearch className='text-gray-400' />
                 <input className='text-gray-700 outline-none bg-transparent rounded-[1vh]  py-1 px-3' placeholder="Search..." />
@@ -24,7 +23,6 @@ const Home = ({ products, userDetails }) => {
 
 
             <HorizontalProductCards />
-
 
             <p className='text-[3.5vh] my-3 font-bold text-gray-700'>Top Collections</p>
             <div className="flex flex-row flex-wrap justify-center my-3">
