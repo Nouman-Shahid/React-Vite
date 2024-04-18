@@ -28,8 +28,7 @@ const Home = ({ products, userDetails }) => {
             <div className="flex flex-row flex-wrap justify-center my-3">
 
                 {
-                    products.filter(item => item.id < 5).map((item) => (
-
+                      products.filter(item => item.id < 5).map((item) => (
                         <ProductCard key={item.id} id={item.id} image={item.image} title={item.title}
                             rating={item.rating.rate} count={item.rating.count} price={item.price} />
                     ))}
