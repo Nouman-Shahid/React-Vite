@@ -21,7 +21,6 @@ const Home = ({ products, userDetails }) => {
                 <input className='text-gray-700 outline-none bg-transparent rounded-[1vh]  py-1 px-3' placeholder="Search..." />
             </div>
 
-
             <HorizontalProductCards />
 
             <p className='text-[3.5vh] my-3 font-bold text-gray-700'>Top Collections</p>
