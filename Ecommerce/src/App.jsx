@@ -17,7 +17,6 @@ function App() {
     try {
       const response = await fetch('https://fakestoreapi.com/products/');
       const data = await response.json();
-      console.log(data)
       setProducts(data)
 
     } catch (error) {
@@ -33,8 +32,6 @@ function App() {
       const user = data.results[0]
 
       setUserDetails(user);
-      console.log(user);
-
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
@@ -52,7 +49,7 @@ function App() {
       <BrowserRouter>
         <Navbar userDetails={userDetails} />
         <Routes>
-          <Route path="/" element={<Home products={products} userDetails={userDetails} />} />
+          {/* <Route path="/" element={<Home products={products} userDetails={userDetails} />} /> */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/settings" element={<Settings userDetails={userDetails} handleUserAPI={handleUserAPI} />} />
         </Routes>
