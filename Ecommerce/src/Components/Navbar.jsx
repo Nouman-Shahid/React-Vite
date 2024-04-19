@@ -5,6 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 import { BsHandbag } from "react-icons/bs";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
+import { FiMinus } from "react-icons/fi";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = ({ userDetails }) => {
@@ -44,7 +45,7 @@ const Navbar = ({ userDetails }) => {
 
   return (
     <>
-      <nav className="flex w-screen h-[8vh]  justify-between items-center px-2 bg-[#FFFFFF]  ">
+      <nav className="flex w-screen h-[8vh] fixed  justify-between items-center px-2 bg-[#FFFFFF] z-50 ">
         <div className="flex space-x-4 items-baseline h-[8vh] ">
           {isClicked !== true ? (
             <AiOutlineMenu className="size-[3.5vh]" onClick={toggleMenu} />
@@ -89,17 +90,30 @@ const Navbar = ({ userDetails }) => {
       <div
         className={`transition-transform ${
           isClicked ? "translate-x-0" : "-translate-x-full"
-        } fixed left-0 p-3 top-[8vh] w-[93%] h-screen bg-[#FFFFFF] border-r border-gray-200 ease-in-out duration-500 flex-col justify-center items-center z-50`}
+        } fixed left-0 pt-3 pb-24 px-2 top-[8vh] w-[93%] h-screen bg-[#FFFFFF] border-r border-gray-200 ease-in-out duration-500 flex-col justify-center items-center z-50 overflow-y-scroll`}
       >
-        <ul className="space-y-8 flex flex-col items-start px-4 font-bold text-[#1A2024">
+        <ul className="space-y-8 flex flex-col items-start px-4 font-bold text-[#1A2024]">
           <li className=" w-[100%] justify-between flex  items-center">
             <p className="text-gray-700 text-[2.4vh]">Categories</p>
-            <AiOutlinePlus
-              className="text-[#8B8B8B] size-[3.3vh]"
-              onClick={showList}
-            />
+            {listClick === false ? (
+              <AiOutlinePlus
+                className="text-[#8B8B8B] size-[3.3vh]"
+                onClick={showList}
+              />
+            ) : (
+              <FiMinus
+                className="text-[#8B8B8B] size-[3.3vh]"
+                onClick={showList}
+              />
+            )}
           </li>
-          {listClick === true && <div className="flex"></div>}
+          {listClick === true && (
+            <div
+              className={`flex flex-col p-1 w-[100%] h-[50vh] bg-gray-100  ease-in-out duration-500 justify-center items-center z-50`}
+            >
+              {/* Your content here */}
+            </div>
+          )}
 
           {lists.map((item) => (
             <li className=" w-[100%] justify-between flex  items-center">
