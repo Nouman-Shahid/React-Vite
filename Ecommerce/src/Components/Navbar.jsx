@@ -114,9 +114,7 @@ const Navbar = ({ userDetails }) => {
           {listClick === true && (
             <div
               className={`flex flex-col p-1 w-[100%] h-[50vh] bg-gray-100  ease-in-out duration-500 justify-center items-center z-50`}
-            >
-              {/* Your content here */}
-            </div>
+            ></div>
           )}
 
           {lists.map((item) => (
