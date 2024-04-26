@@ -45,7 +45,7 @@ const Navbar = ({ userDetails }) => {
 
   return (
     <>
-      <nav className="flex w-screen h-[8vh] fixed  justify-between items-center px-2 bg-[#FFFFFF] z-50 ">
+      <nav className="flex w-screen h-[8vh] fixed  justify-between items-center px-2 md:px-10 bg-[#FFFFFF] z-50 ">
         <div className="flex space-x-4 items-baseline h-[8vh] ">
           {isClicked !== true ? (
             <AiOutlineMenu className="size-[3.5vh]" onClick={toggleMenu} />
@@ -73,16 +73,20 @@ const Navbar = ({ userDetails }) => {
             to="/cart"
             className="size-[3.8vh] text-gray-700  md:flex"
           />
-          <BsHandbag
-            to="/cart"
-            className="size-[3.5vh] text-gray-700  md:flex"
-          />
-          {userDetails && userDetails.picture && (
-            <img
-              src={userDetails.picture.medium}
-              alt={userDetails.name.first}
-              className="rounded-[50%] size-[5vh] border border-gray-600"
+          <Link to="/cart">
+            <BsHandbag
+              to="/cart"
+              className="size-[3.5vh] text-gray-700  md:flex"
             />
+          </Link>
+          {userDetails && userDetails.picture && (
+            <Link to="/settings">
+              <img
+                src={userDetails.picture.medium}
+                alt={userDetails.name.first}
+                className="rounded-[50%] size-[5vh] border border-gray-600"
+              />
+            </Link>
           )}
         </div>
       </nav>

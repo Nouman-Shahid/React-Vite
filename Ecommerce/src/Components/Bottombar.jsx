@@ -24,25 +24,25 @@ const Bottombar = () => {
       id: 2,
       text: "Categories",
       icon: BiCategoryAlt,
-      path: "/message",
+      path: "/categories",
     },
     {
       id: 3,
       text: "Rewards",
       icon: IoGiftSharp,
-      path: "/cart",
+      path: "/rewards",
     },
     {
       id: 4,
       text: "Personalization",
       icon: PiNotePencil,
-      path: "/settings",
+      path: "/personalization",
     },
     {
       id: 5,
       text: "Chat",
       icon: FaWhatsapp,
-      path: "/settings",
+      path: "/chat",
     },
   ];
 
