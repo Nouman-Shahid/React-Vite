@@ -7,8 +7,9 @@ import { IoIosSearch } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiMinus } from "react-icons/fi";
 import { IoIosArrowForward } from "react-icons/io";
+import ProductCard from "./ProductCard";
 
-const Navbar = ({ userDetails }) => {
+const Navbar = ({ userDetails, products }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [listClick, setListClick] = useState(false);
 
@@ -113,8 +114,17 @@ const Navbar = ({ userDetails }) => {
           </li>
           {listClick === true && (
             <div
-              className={`flex flex-col p-1 w-[100%] h-[50vh] bg-gray-100  ease-in-out duration-500 justify-center items-center z-50`}
-            ></div>
+              className={`flex flex-wrap  w-[100%] h-auto bg-gray-100 rounded-[2vh] justify-center items-center z-50`}
+            >
+              {products
+                .filter((item) => item.id < 13)
+                .map((item) => (
+                  <img
+                    src={item.image}
+                    className="size-[9vh] m-4 mix-blend-multiply"
+                  />
+                ))}
+            </div>
           )}
 
           {lists.map((item) => (

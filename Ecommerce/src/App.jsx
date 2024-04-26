@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar userDetails={userDetails} />
+        <Navbar products={products} userDetails={userDetails} />
         <Routes>
           <Route
             path="/"
