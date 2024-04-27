@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 const Cart = () => {
-    return (
-        <>
+  return (
+    <>
+      <h1 to="/cart" className="text-center py-16">
+        Cart
+      </h1>
+    </>
+  );
+};
 
-            <h1 to='/cart' className='text-center py-16'>Cart</h1>
-
-        </>
-    )
-}
-
-export default Cart
+export default Cart;
