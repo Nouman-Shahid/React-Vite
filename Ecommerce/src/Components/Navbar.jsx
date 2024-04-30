@@ -55,7 +55,10 @@ const Navbar = ({ userDetails, products }) => {
           )}
           <p className="text-[#1A2024] font-cinzel text-[5vh] font-[350]">
             bo
-            <span className="font-jersey font-bold text-[4vh]  text-[#ED1C24]">
+            <span
+              className="font-jersey font-bold text-[4vh] 
+             text-[#ED1C24]"
+            >
               A
             </span>
             t
