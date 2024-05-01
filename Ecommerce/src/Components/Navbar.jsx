@@ -57,7 +57,7 @@ const Navbar = ({ userDetails, products }) => {
             bo
             <span
               className="font-jersey font-bold text-[4vh] 
-             text-[#ED1C24]"
+             text-[#ED1C24] "
             >
               A
             </span>
